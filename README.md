@@ -14,13 +14,13 @@ colors for each icon.
 ## Installation
 
 ```vim
-Plug 'nvim-tree/nvim-web-devicons'
+Plug 'DaikyXendo/nvim-web-devicons'
 ```
 
 or with [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
-```
-use 'nvim-tree/nvim-web-devicons'
+```lua
+use 'DaikyXendo/nvim-web-devicons'
 ```
 
 ## Usage
