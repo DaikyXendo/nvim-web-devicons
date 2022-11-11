@@ -3,6 +3,10 @@
 A `lua` fork of [vim-devicons](https://github.com/ryanoasis/vim-devicons). This plugin provides the same icons _as well as_
 colors for each icon.
 
+## Image
+
+![image](https://user-images.githubusercontent.com/46809008/201297033-239daae3-8dc4-49b3-879f-5d2e4e9dc39c.png)
+
 ## Requirements
 
 - [A patched font](https://www.nerdfonts.com/)
