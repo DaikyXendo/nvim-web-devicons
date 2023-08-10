@@ -1,15 +1,13 @@
 # Nvim-web-devicons
 
-A `lua` fork of [vim-devicons](https://github.com/ryanoasis/vim-devicons). This plugin provides the same icons _as well as_
-colors for each icon.
+## 470+ file types supported
 
 ## Image
 
-![image](https://user-images.githubusercontent.com/46809008/201297033-239daae3-8dc4-49b3-879f-5d2e4e9dc39c.png)
+## 🛑🛑 Warning 🛑🛑
 
-## Requirements
-
-- [A patched font](https://www.nerdfonts.com/)
+-   You must use the latest version of [Nerd Font (>= v3.0.0)](https://www.nerdfonts.com/). This can break icons in your other plugins!!
+-   Requirements: [Nvim >= 0.7.0](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
 ## Installation
 
@@ -33,25 +31,26 @@ this might need to be re-called in a `Colorscheme` to re-apply cleared highlight
 if the color scheme changes
 
 ```lua
-require'nvim-web-devicons'.setup {
- -- your personnal icons can go here (to override)
- -- you can specify color or cterm_color instead of specifying both of them
- -- DevIcon will be appended to `name`
- override = {
-  zsh = {
-    icon = "",
-    color = "#428850",
-    cterm_color = "65",
-    name = "Zsh"
-  }
- };
- -- globally enable different highlight colors per icon (default to true)
- -- if set to false all icons will have the default icon's color
- color_icons = true;
- -- globally enable default icons (default to false)
- -- will get overriden by `get_icons` option
- default = true;
+require 'nvim-web-devicons'.setup {
+    -- your personnal icons can go here (to override)
+    -- you can specify color or cterm_color instead of specifying both of them
+    -- DevIcon will be appended to `name`
+    override = {
+        zsh = {
+            icon = "",
+            color = "#428850",
+            cterm_color = "65",
+            name = "Zsh"
+        }
+    },
+    -- globally enable different highlight colors per icon (default to true)
+    -- if set to false all icons will have the default icon's color
+    color_icons = true,
+    -- globally enable default icons (default to false)
+    -- will get overriden by `get_icons` option
+    default = true,
 }
+
 ```
 
 ### Get Icon
@@ -74,6 +73,7 @@ require'nvim-web-devicons'.get_icon(filename, extension, { default = true })
 ```
 
 You can check if the setup function was already called with:
+
 ```lua
 require'nvim-web-devicons'.has_loaded()
 ```
@@ -84,6 +84,7 @@ require'nvim-web-devicons'.has_loaded()
 `get_icon_cterm_color` returns cterm color instead of gui color
 `get_icon` returns icon and highlight name.
 If you want to get color code, you can use this function.
+
 ```lua
 local icon, color = require'nvim-web-devicons'.get_icon_color("init.lua", "lua")
 assert(icon == "")
@@ -100,19 +101,18 @@ require'nvim-web-devicons'.get_icons()
 
 This can be useful for debugging purposes or for creating custom highlights for each icon.
 
-
 ### Set an icon
 
 You can override individual icons with the `set_icon({...})` function:
 
 ```lua
 require("nvim-web-devicons").set_icon {
-  zsh = {
-    icon = "",
-    color = "#428850",
-    cterm_color = "65",
-    name = "Zsh"
-  }
+    zsh = {
+        icon = "",
+        color = "#428850",
+        cterm_color = "65",
+        name = "Zsh"
+    }
 }
 ```
 
@@ -136,3 +136,4 @@ require("nvim-web-devicons").get_icon_cterm_color_by_filetype(filetype, opts)
 These functions are the same as their counterparts without the `_by_filetype` suffix, but they take a filetype instead of a name/extension.
 
 You can also use `get_icon_name_by_filetype(filetype)` to get the icon name associated with the filetype.
+
