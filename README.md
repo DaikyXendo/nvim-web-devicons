@@ -4,6 +4,8 @@
 
 ## Image
 
+<img src="https://github.com/DaikyXendo/nvim-web-devicons/assets/46809008/06cf223e-4eac-49e1-af77-541421a48143" width=900 />
+
 ## 🛑🛑 Warning 🛑🛑
 
 -   You must use the latest version of [Nerd Font (>= v3.0.0)](https://www.nerdfonts.com/). This can break icons in your other plugins!!
