@@ -1,6 +1,6 @@
 # Nvim-web-devicons
 
-## 470+ file types supported
+## 791 file types supported (require Nerd Font >= 3.0.0)
 
 ## Image
 
